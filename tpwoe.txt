@@ -1,0 +1,31 @@
+prontera,151,186,5	script	Teleportador WOE#p	435,{
+set .n$,"^0000FF[ Teleportador WOE ]^000000";
+
+mes .n$;
+mes "Olá! Eu sou o teleportador WOE,";
+mes "Qual castelo você deseja ir?";
+	next;
+	switch(select("^FF0000- Kriemhild^000000","^FF0000- Palácio do Sol^000000","- Nada, obrigado!")){
+		case 1:
+			mes .n$;
+			mes "Boa viagem!";
+			next;
+			warp "prt_gld",140,65;
+			close;
+ 
+		case 2:
+			mes .n$;
+			mes "Boa viagem!";
+			next;
+			warp "pay_gld",120,230;
+			close;
+			
+		case 3:
+			mes .n$;
+			mes "Volte quando precisar de meus serviços!";
+			close;
+	}
+
+
+ 
+}

@@ -1,0 +1,984 @@
+prontera,151,190,5	script	Teleportador::Teleportador	806,{
+	set .n$,"^0000FF[ Teleportador ]^000000";
+	begin:
+mes .n$;
+mes "Olá ^0000FF"+strcharinfo(0)+",^000000 eu sou o responsável pelo serviço de teleporte do servidor.";
+mes "Você deseja ir à uma ^FF0000cidade^000000 ou algum outro lugar? Basta me dizer.";
+next;
+menu	"^FF0000- Ultimo Teleporte^000000",ultimoteleporte,"^FF0000- Ir à uma cidade^000000",cidades,"^FF0000- Ir à outros lugares^000000",outrosmapas,"- Nada, obrigado!",nada;
+
+//---------------------
+// CIDADES
+//---------------------
+cidades:
+menu	"^FF0000- Alberta^000000",alberta, // 1
+	"^FF0000- Aldebaran^000000",aldebaran, // 2
+	"^FF0000- Amatsu^000000",amatsu, // 3
+	"^FF0000- Ayothaya^000000",ayothaya, // 4
+	"^FF0000- Brasilis^000000",brasilis, // 5
+	"^FF0000- Comodo^000000",comodo, // 6
+	"^FF0000- Einbech^000000",einbech, // 7
+	"^FF0000- Einbroch^000000",einbroch, // 8
+	"^FF0000- Geffen^000000",geffen, // 9
+	"^FF0000- Gonryun^000000",gonryun, // 10
+	"^FF0000- Hugel^000000",hugel, // 11
+	"^FF0000- Izlude^000000",izlude, // 12
+	"^FF0000- Jawaii^000000",jawaii, // 13
+	"^FF0000- Juno^000000",juno, // 14
+	"^FF0000- Lighthalzen^000000",lighthalzen, // 15
+	"^FF0000- Louyang^000000",louyang, // 16
+	"^FF0000- Lutie^000000",xmas,	 // 17
+	"^FF0000- Morroc^000000",morocc, // 18
+	"^FF0000- Moscovia^000000",moscovia, // 19
+	"^FF0000- Niflheim^000000",niflheim, // 20
+	"^FF0000- Payon^000000",payon, // 21
+	"^FF0000- Prontera^000000",prontera, // 22
+	"^FF0000- Rachel^000000",rachel, // 23
+	"^FF0000- Umbala^000000",umbala, // 24
+	"^FF0000- Veins^000000",veins, // 25
+	"- Retornar ao menu anterior",begin;
+
+//---------------------
+// OUTROS MAPAS
+//---------------------
+outrosmapas:
+menu	"^FF0000- Calabouço de Einbech^000000",ein_dun, // 1
+	"^FF0000- Calabouço de Kunlun^000000",gon_dun, // 2
+	"^FF0000- Calabouço de Magma^000000",mag_dun, // 3
+ 	"^FF0000- Caverna de Payon^000000",pay_dun, // 4
+	"^FF0000- Desfiladeiro El Mes^000000",yuno_fild, // 5
+	"^FF0000- Esfinge^000000",sphinx, // 6
+	"^FF0000- Esgoto de Prontera^000000",prt_sew, // 7
+	"^FF0000- Fábica de Brinquedos^000000",xmas_dun, // 8
+	"^FF0000- Formigueiro Infernal^000000",anthell, // 9
+	"^FF0000- Glast Heim^000000",glastheim, // 10
+	"^FF0000- Ilha Byalan (Túnel Submarino)^000000",iz_dun, // 11
+	"^FF0000- Ilha das Tartarugas^000000",tur_dun, // 12
+	"^FF0000- Labirinto da Floresta^000000",prt_maze, // 13
+	"^FF0000- Labirinto do Santuário Ancestral^000000",ayo_dun, // 14
+	"^FF0000- Labirinto dos Tatames^000000",ama_dun, // 15
+	"^FF0000- Lago do Abismo^000000",abysslake, // 16
+	"^FF0000- Mina de Carvão^000000",mjo_dun, // 17
+	"^FF0000- Navio Fantasma^000000",albertaship, // 18
+	"^FF0000- Pirâmide^000000",moc_pryd, // 19
+	"^FF0000- Tumba Real^000000",lou_dun, // 20
+	"^FF0000- Vila dos Orcs^000000",orcsdun, // 21
+	"- Retornar ao menu anterior",begin;
+
+//---------------------
+// ULTIMO TELEPORTE
+//---------------------
+ultimoteleporte:
+	if(lastmap$=="") {
+	mes .n$;
+	mes "Você ainda não se teleportou."; 
+	close; 
+	}
+	if(lastmap$=="xmas") {
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando para ^0000FFlutie^000000.";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;
+			warp "xmas.gat",148,131;
+			end;
+	}
+	if(lastmap$=="yuno") {
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando para ^0000FFjuno^000000.";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;
+			warp "yuno.gat",157,165;
+			end;
+	}
+	if(lastmap$ == "einbech" && lastx == 135 && lasty == 249){ 
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando!";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;
+			warp "einbech.gat",135,249;
+			end;
+	}
+	if(lastmap$ == "gonryun" && lastx == 160 && lasty == 195){ 
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando!";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;
+			warp "gonryun.gat",160,195;
+			end;
+	}
+	if(lastmap$ == "yuno_fild03"){ 
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando!";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;
+			warp "yuno_fild03.gat",36,140;
+			end;
+	}
+	if(lastmap$ == "pay_arche"){ 
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando!";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;
+			warp "pay_arche.gat",39,131;
+			end;
+	}
+	if(lastmap$ == "yuno_fild07"){ 
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando!";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;
+			warp "yuno_fild07.gat",218,176;
+			end;
+	}		
+	if(lastmap$ == "moc_fild19"){ 
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando!";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;
+			warp "moc_fild19.gat",107,100;
+			end;
+	}		
+	if(lastmap$ == "prt_sewb1"){ 
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando!";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;
+			warp "prt_sewb1.gat",126,248;
+			end;
+	}	
+	if(lastmap$ == "xmas" && lastx == 144 && lasty == 310){ 
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando!";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;
+			warp "xmas.gat",144,310;
+			end;
+	}	
+	if(lastmap$ == "moc_fild20"){ 
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando!";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;
+			warp "moc_fild20.gat",148,141;
+			end;
+	}	
+	if(lastmap$ == "glast_01"){ 
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando!";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;
+			warp "glast_01.gat",368,303;
+			end;
+	}	
+	if(lastmap$ == "izlu2dun"){ 
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando!";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;
+			warp "izlu2dun.gat",106,88;
+			end;
+	}		
+	if(lastmap$ == "tur_dun01"){ 
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando!";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;
+			warp "tur_dun01.gat",149,238;
+			end;
+	}	
+	if(lastmap$ == "prt_fild01"){ 
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando!";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;
+			warp "prt_fild01.gat",136,368;
+			end;
+	}		
+	if(lastmap$ == "ayo_fild02"){ 
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando!";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;
+			warp "ayo_fild02.gat",279,150;
+			end;
+	}		
+	if(lastmap$ == "ama_fild01"){ 
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando!";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;
+			warp "ama_fild01.gat",229,12;
+			end;
+	}		
+	if(lastmap$ == "hu_fild05"){ 
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando!";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;
+			warp "hu_fild05.gat",189,207;
+			end;
+	}		
+	if(lastmap$ == "mjolnir_02"){ 
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando!";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;
+			warp "mjolnir_02.gat",81,359;
+			end;
+	}	
+	if(lastmap$ == "alb2trea"){ 
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando!";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;
+			warp "alb2trea.gat",75,98;
+			end;
+	}		
+	if(lastmap$ == "moc_ruins"){ 
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando!";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;
+			warp "moc_ruins.gat",62,162;
+			end;
+	}			
+	if(lastmap$ == "louyang" && lastx == 43 && lasty == 274){ 
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando!";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;
+			warp "louyang.gat",43,274;
+			end;
+	}	
+	if(lastmap$ == "gef_fild10"){ 
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando!";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;
+			warp "gef_fild10.gat",70,332;
+			end;
+	}		
+	mes .n$;
+	mes "Vamos lá!";
+	mes "Teleportando para ^0000FF"+lastmap$+"^000000.";
+	close2;
+	specialeffect2 316;
+	sleep2 2000;
+	warp lastmap$,lastx,lasty;
+	end;
+//---------------------
+// NADA
+//---------------------
+nada:
+	mes .n$;
+	mes "Volte quando precisar de meus serviços.";
+	close;
+
+//-------------------------------
+//          CIDADES
+//-------------------------------
+
+alberta: // 1
+set lastmap$,"alberta"; 
+set lastx,27; 
+set lasty,235;
+mes .n$;
+mes "Vamos lá!";
+mes "Teleportando para ^0000FFalberta^000000.";
+close2;
+specialeffect2 316;
+sleep2 2000;
+warp "alberta.gat",27,235; 
+end;
+
+aldebaran: // 2
+set lastmap$,"aldebaran"; 
+set lastx,140; 
+set lasty,115;
+mes .n$;
+mes "Vamos lá!";
+mes "Teleportando para ^0000FFaldebaran^000000.";
+close2;
+specialeffect2 316;
+sleep2 2000;
+warp "aldebaran.gat",140,115; 
+end;
+
+amatsu: // 3
+set lastmap$,"amatsu"; 
+set lastx,197; 
+set lasty,84;
+mes .n$;
+mes "Vamos lá!";
+mes "Teleportando para ^0000FFamatsu^000000.";
+close2;
+specialeffect2 316;
+sleep2 2000;
+warp "amatsu.gat",197,84; 
+end;
+
+ayothaya:  // 4
+set lastmap$,"ayothaya"; 
+set lastx,149; 
+set lasty,117;
+mes .n$;
+mes "Vamos lá!";
+mes "Teleportando para ^0000FFayothaya^000000.";
+close2;
+specialeffect2 316;
+sleep2 2000;
+warp "ayothaya.gat",149,117; 
+end;
+
+brasilis:  // 5
+set lastmap$,"brasilis"; 
+set lastx,195; 
+set lasty,213; 
+mes .n$;
+mes "Vamos lá!";
+mes "Teleportando para ^0000FFbrasilis^000000.";
+close2;
+specialeffect2 316;
+sleep2 2000;
+warp "brasilis.gat",195,213; 
+end;
+
+comodo: // 6
+set lastmap$,"comodo"; 
+set lastx,188; 
+set lasty,156; 
+mes .n$;
+mes "Vamos lá!";
+mes "Teleportando para ^0000FFcomodo^000000.";
+close2;
+specialeffect2 316;
+sleep2 2000;
+warp "comodo.gat",188,156; 
+end;
+
+einbech: // 7
+set lastmap$,"einbech"; 
+set lastx,194; 
+set lasty,96; 
+mes .n$;
+mes "Vamos lá!";
+mes "Teleportando para ^0000FFeinbech^000000.";
+close2;
+specialeffect2 316;
+sleep2 2000;
+warp "einbech.gat",194,96; 
+end;
+
+einbroch: // 8
+set lastmap$,"einbroch"; 
+set lastx,64; 
+set lasty,197; 
+mes .n$;
+mes "Vamos lá!";
+mes "Teleportando para ^0000FFeinbroch^000000.";
+close2;
+specialeffect2 316;
+sleep2 2000;
+warp "einbroch.gat",64,197; 
+end;
+
+geffen: // 9
+set lastmap$,"geffen"; 
+set lastx,119; 
+set lasty,59; 
+mes .n$;
+mes "Vamos lá!";
+mes "Teleportando para ^0000FFgeffen^000000.";
+close2;
+specialeffect2 316;
+sleep2 2000;
+warp "geffen.gat",119,59; 
+end;
+
+gonryun: // 10
+set lastmap$,"gonryun"; 
+set lastx,159; 
+set lasty,117; 
+mes .n$;
+mes "Vamos lá!";
+mes "Teleportando para ^0000FFgonryun^000000.";
+close2;
+specialeffect2 316;
+sleep2 2000;
+warp "gonryun.gat",159,117; 
+end;
+
+hugel: // 11
+set lastmap$,"hugel"; 
+set lastx,99; 
+set lasty,145; 
+mes .n$;
+mes "Vamos lá!";
+mes "Teleportando para ^0000FFhugel^000000.";
+close2;
+specialeffect2 316;
+sleep2 2000;
+warp "hugel.gat",99,145; 
+end;
+
+izlude: // 12
+set lastmap$,"izlude"; 
+set lastx,128; 
+set lasty,112; 
+mes .n$;
+mes "Vamos lá!";
+mes "Teleportando para ^0000FFizlude^000000.";
+close2;
+specialeffect2 316;
+sleep2 2000;
+warp "izlude.gat",128,112; 
+end;
+
+jawaii: // 13
+set lastmap$,"jawaii"; 
+set lastx,249; 
+set lasty,127; 
+mes .n$;
+mes "Vamos lá!";
+mes "Teleportando para ^0000FFjawaii^000000.";
+close2;
+specialeffect2 316;
+sleep2 2000;
+warp "jawaii.gat",249,127; 
+end;
+
+juno: // 14
+set lastmap$,"yuno"; 
+set lastx,157; 
+set lasty,165; 
+mes .n$;
+mes "Vamos lá!";
+mes "Teleportando para ^0000FFjuno^000000.";
+close2;
+specialeffect2 316;
+sleep2 2000;
+warp "yuno.gat",157,165; 
+end;
+
+lighthalzen: // 15
+set lastmap$,"lighthalzen"; 
+set lastx,159; 
+set lasty,94; 
+mes .n$;
+mes "Vamos lá!";
+mes "Teleportando para ^0000FFlighthalzen^000000.";
+close2;
+specialeffect2 316;
+sleep2 2000;
+warp "lighthalzen.gat",159,94; 
+end;
+
+louyang: // 16
+set lastmap$,"louyang"; 
+set lastx,218; 
+set lasty,114; 
+mes .n$;
+mes "Vamos lá!";
+mes "Teleportando para ^0000FFlouyang^000000.";
+close2;
+specialeffect2 316;
+sleep2 2000;
+warp "louyang.gat",218,114; 
+end;
+
+xmas: // 17
+set lastmap$,"xmas"; 
+set lastx,148; 
+set lasty,131; 
+mes .n$;
+mes "Vamos lá!";
+mes "Teleportando para ^0000FFlutie^000000.";
+close2;
+specialeffect2 316;
+sleep2 2000;
+warp "xmas.gat",148,131; 
+end;
+
+morocc: // 18
+set lastmap$,"morocc"; 
+set lastx,159; 
+set lasty,135; 
+mes .n$;
+mes "Vamos lá!";
+mes "Teleportando para ^0000FFmorroc^000000.";
+close2;
+specialeffect2 316;
+sleep2 2000;
+warp "morocc.gat",159,135; 
+end;
+
+moscovia: // 19
+set lastmap$,"moscovia"; 
+set lastx,223; 
+set lasty,192; 
+mes .n$;
+mes "Vamos lá!";
+mes "Teleportando para ^0000FFmoscovia^000000.";
+close2;
+specialeffect2 316;
+sleep2 2000;
+warp "moscovia.gat",223,192; 
+end;
+
+niflheim: // 20
+set lastmap$,"niflheim"; 
+set lastx,21; 
+set lasty,153; 
+mes .n$;
+mes "Vamos lá!";
+mes "Teleportando para ^0000FFniflheim^000000.";
+close2;
+specialeffect2 316;
+sleep2 2000;
+warp "niflheim.gat",21,153; 
+end;
+
+payon: // 21
+set lastmap$,"payon"; 
+set lastx,156; 
+set lasty,226; 
+mes .n$;
+mes "Vamos lá!";
+mes "Teleportando para ^0000FFpayon^000000.";
+close2;
+specialeffect2 316;
+sleep2 2000;
+warp "payon.gat",156,226; 
+end;
+
+prontera: // 22
+set lastmap$,"prontera"; 
+set lastx,156; 
+set lasty,191; 
+mes .n$;
+mes "Vamos lá!";
+mes "Teleportando para ^0000FFprontera^000000.";
+close2;
+specialeffect2 316;
+sleep2 2000;
+warp "prontera.gat",156,191; 
+end;
+
+rachel:  // 23
+set lastmap$,"rachel"; 
+set lastx,130; 
+set lasty,111; 
+mes .n$;
+mes "Vamos lá!";
+mes "Teleportando para ^0000FFrachel^000000.";
+close2;
+specialeffect2 316;
+sleep2 2000;
+warp "rachel.gat",130,111; 
+end;
+
+umbala: // 24
+set lastmap$,"umbala"; 
+set lastx,100; 
+set lasty,159; 
+mes .n$;
+mes "Vamos lá!";
+mes "Teleportando para ^0000FFumbala^000000.";
+close2;
+specialeffect2 316;
+sleep2 2000;
+warp "umbala.gat",100,159; 
+end;
+
+veins: // 25
+set lastmap$,"veins"; 
+set lastx,216; 
+set lasty,122;
+mes .n$;
+mes "Vamos lá!";
+mes "Teleportando para ^0000FFveins^000000.";
+close2;
+specialeffect2 316;
+sleep2 2000;
+warp "veins.gat",216,122; 
+end;
+
+
+//-------------------------------
+//        OUTROS MAPAS
+//-------------------------------
+
+ein_dun: // CALABOUÇO DE EINBECH - 1
+set lastmap$,"einbech"; 
+set lastx,135; 
+set lasty,249; 
+mes .n$;
+mes "Vamos lá!";
+mes "Teleportando!";
+close2;
+specialeffect2 316;
+sleep2 2000;
+warp "einbech.gat",135,249; 
+end;
+
+gon_dun: // CALABOUÇO DE KUNLUN - 2
+set lastmap$,"gonryun"; 
+set lastx,160; 
+set lasty,195;
+mes .n$;
+mes "Vamos lá!";
+mes "Teleportando!";
+close2;
+specialeffect2 316;
+sleep2 2000;
+warp "gonryun.gat",160,195; 
+end;
+
+mag_dun: // CALABOUÇO DE MAGMA - 3
+set lastmap$,"yuno_fild03"; 
+set lastx,36; 
+set lasty,140; 
+mes .n$;
+mes "Vamos lá!";
+mes "Teleportando!";
+close2;
+specialeffect2 316;
+sleep2 2000;
+warp "yuno_fild03.gat",36,140; 
+end;
+
+pay_dun: // CAVERNA DE PAYON - 4
+set lastmap$,"pay_arche"; 
+set lastx,39; 
+set lasty,131; 
+mes .n$;
+mes "Vamos lá!";
+mes "Teleportando!";
+close2;
+specialeffect2 316;
+sleep2 2000;
+warp "pay_arche.gat",39,131; 
+end;
+
+yuno_fild: // DESFILADEIRO EL MES - 5
+set lastmap$,"yuno_fild07"; 
+set lastx,218; 
+set lasty,176; 
+mes .n$;
+mes "Vamos lá!";
+mes "Teleportando!";
+close2;
+specialeffect2 316;
+sleep2 2000;
+warp "yuno_fild07.gat",218,176;
+end;
+
+sphinx: // ESFINGE - 6
+set lastmap$,"moc_fild19"; 
+set lastx,107; 
+set lasty,100; 
+mes .n$;
+mes "Vamos lá!";
+mes "Teleportando!";
+close2;
+specialeffect2 316;
+sleep2 2000;
+warp "moc_fild19.gat",107,100;
+end;
+
+prt_sew: // ESGOTO DE PRONTERA - 7
+set lastmap$,"prt_sewb1"; 
+set lastx,126; 
+set lasty,248; 
+mes .n$;
+mes "Vamos lá!";
+mes "Teleportando!";
+close2;
+specialeffect2 316;
+sleep2 2000;
+warp "prt_sewb1.gat",126,248;
+end;
+
+xmas_dun: // FÁBRICA DE BRINQUEDOS - 8
+set lastmap$,"xmas"; 
+set lastx,144; 
+set lasty,310; 
+mes .n$;
+mes "Vamos lá!";
+mes "Teleportando!";
+close2;
+specialeffect2 316;
+sleep2 2000;
+warp "xmas.gat",144,310;
+end;
+
+anthell: // FORMIGUEIRO INFERNAL - 9
+set lastmap$,"moc_fild20"; 
+set lastx,148; 
+set lasty,141; 
+mes .n$;
+mes "Vamos lá!";
+mes "Teleportando!";
+close2;
+specialeffect2 316;
+sleep2 2000;
+warp "moc_fild20.gat",148,141;
+end;
+
+glastheim: // GLAST HEIM - 10
+set lastmap$,"glast_01"; 
+set lastx,368; 
+set lasty,303; 
+mes .n$;
+mes "Vamos lá!";
+mes "Teleportando!";
+close2;
+specialeffect2 316;
+sleep2 2000;
+warp "glast_01.gat",368,303;
+end;
+
+iz_dun: // ILHA BYALAN (TUNEL SUBMARINO) - 11
+set lastmap$,"izlu2dun"; 
+set lastx,108; 
+set lasty,88; 
+mes .n$;
+mes "Vamos lá!";
+mes "Teleportando!";
+close2;
+specialeffect2 316;
+sleep2 2000;
+warp "izlu2dun.gat",106,88;
+end;
+
+tur_dun: // ILHA DAS TARTARUGAS - 12
+set lastmap$,"tur_dun01"; 
+set lastx,149; 
+set lasty,238; 
+mes .n$;
+mes "Vamos lá!";
+mes "Teleportando!";
+close2;
+specialeffect2 316;
+sleep2 2000;
+warp "tur_dun01.gat",149,238;
+end;
+
+prt_maze: // LABIRINTO DA FLORESTA - 13
+set lastmap$,"prt_fild01"; 
+set lastx,136; 
+set lasty,368; 
+mes .n$;
+mes "Vamos lá!";
+mes "Teleportando!";
+close2;
+specialeffect2 316;
+sleep2 2000;
+warp "prt_fild01.gat",136,368;
+end;
+
+ayo_dun: // LABIRINTO DO SANTUARIO ANCESTRAL - 14
+set lastmap$,"ayo_fild02"; 
+set lastx,279; 
+set lasty,150; 
+mes .n$;
+mes "Vamos lá!";
+mes "Teleportando!";
+close2;
+specialeffect2 316;
+sleep2 2000;
+warp "ayo_fild02.gat",279,150; 
+end;
+
+ama_dun: // LABIRINTO DOS TATAMES - 15
+set lastmap$,"ama_dun01"; 
+set lastx,229; 
+set lasty,12; 
+mes .n$;
+mes "Vamos lá!";
+mes "Teleportando!";
+close2;
+specialeffect2 316;
+sleep2 2000;
+warp "ama_dun01.gat",229,12;
+end;
+
+abysslake: // O LAGO DO ABISMO - 16
+set lastmap$,"hu_fild05"; 
+set lastx,189; 
+set lasty,207; 
+mes .n$;
+mes "Vamos lá!";
+mes "Teleportando!";
+close2;
+specialeffect2 316;
+sleep2 2000;
+warp "hu_fild05.gat",189,207;
+end;
+
+mjo_dun: // MINA DE CARVÃO - 17
+set lastmap$,"mjolnir_02"; 
+set lastx,81; 
+set lasty,359; 
+mes .n$;
+mes "Vamos lá!";
+mes "Teleportando!";
+close2;
+specialeffect2 316;
+sleep2 2000;
+warp "mjolnir_02.gat",81,359;
+end;
+
+albertaship: // NAVIO FANTASMA - 18
+set lastmap$,"alb2trea"; 
+set lastx,75; 
+set lasty,98; 
+mes .n$;
+mes "Vamos lá!";
+mes "Teleportando!";
+close2;
+specialeffect2 316;
+sleep2 2000;
+warp "alb2trea.gat",75,98;
+end;
+
+moc_pryd: // PIRÂMIDE - 19
+set lastmap$,"moc_ruins"; 
+set lastx,62; 
+set lasty,162; 
+mes .n$;
+mes "Vamos lá!";
+mes "Teleportando!";
+close2;
+specialeffect2 316;
+sleep2 2000;
+warp "moc_ruins.gat",62,162;
+end;
+
+lou_dun: // TUMBA REAL - 20
+set lastmap$,"louyang"; 
+set lastx,43; 
+set lasty,274; 
+mes .n$;
+mes "Vamos lá!";
+mes "Teleportando!";
+close2;
+specialeffect2 316;
+sleep2 2000;
+warp "louyang.gat",43,274;
+end;
+
+orcsdun: // VILA DOS ORCS - 21
+set lastmap$,"gef_fild10"; 
+set lastx,70; 
+set lasty,332; 
+mes .n$;
+mes "Vamos lá!";
+mes "Teleportando!";
+close2;
+specialeffect2 316;
+sleep2 2000;
+warp "gef_fild10.gat",70,332;
+end;
+}
+
+//---------------------
+// DUPLICATAS CIDADES
+//---------------------
+alberta,30,240,4	duplicate(Teleportador)	Teleportador#3-1	806 // CIDADE
+aldebaran,142,122,4	duplicate(Teleportador)	Teleportador#4-1	806 // CIDADE
+amatsu,202,87,4	duplicate(Teleportador)	Teleportador#5-1	806 // CIDADE
+ayothaya,147,122,5	duplicate(Teleportador)	Teleportador#6-1	806 // CIDADE
+brasilis,193,218,5	duplicate(Teleportador)	Teleportador#36-1	806 // CIDADE
+comodo,191,162,4	duplicate(Teleportador)	Teleportador#7-1	806 //CIDADE
+einbech,201,105,4	duplicate(Teleportador)	Teleportador#8-1	806
+einbroch,69,203,4	duplicate(Teleportador)	Teleportador#9-1	806
+geffen,122,62,4	duplicate(Teleportador)	Teleportador#12-1	806
+gonryun,156,126,5	duplicate(Teleportador)	Teleportador#30-1	806
+hugel,102,151,4	duplicate(Teleportador)	Teleportador#10-1	806
+izlude,130,116,4	duplicate(Teleportador)	Teleportador#13-1	806
+jawaii,254,128,4	duplicate(Teleportador)	Teleportador#37-1	806
+lighthalzen,156,101,5	duplicate(Teleportador)	Teleportador#11-1	806
+louyang,37,275,6	duplicate(Teleportador)	Teleportador#48-1	806
+louyang,219,121,4	duplicate(Teleportador)	Teleportador#31-1	806
+morocc,162,144,4	duplicate(Teleportador)	Teleportador#15-1	806
+moscovia,220,198,5	duplicate(Teleportador)	Teleportador#33-1	806
+niflheim,22,158,4	duplicate(Teleportador)	Teleportador#38-1	806
+payon,158,233,4	duplicate(Teleportador)	Teleportador#16-1	806
+rachel,133,115,4	duplicate(Teleportador)	Teleportador#35-1	806
+umbala,101,165,4	duplicate(Teleportador)	Teleportador#32-1	806
+xmas,150,136,4	duplicate(Teleportador)	Teleportador#14-1	806
+xmas,147,312,4	duplicate(Teleportador)	Teleportador#42-1	806
+yuno,160,170,4	duplicate(Teleportador)	Teleportador#17-1	806
+veins,218,127,4	duplicate(Teleportador)	Teleportador#34-1	806
+
+//---------------------
+// DUPLICATAS - OUTROS MAPAS
+//---------------------
+moc_fild04.gat,207,331,4	duplicate(Teleportador)	Teleportador#18-1	806
+izlu2dun.gat,103,92,5	duplicate(Teleportador)	Teleportador#19-1	806
+mjolnir_02.gat,76,362,5	duplicate(Teleportador)	Teleportador#20-1	806
+prt_fild05.gat,273,215,4	duplicate(Teleportador)	Teleportador#21-1	806
+glast_01.gat,370,308,4	duplicate(Teleportador)	Teleportador#22-1	806
+yuno_fild03.gat,37,135,4	duplicate(Teleportador)	Teleportador#23-1	806
+gef_fild10.gat,71,339,4	duplicate(Teleportador)	Teleportador#24-1	806
+pay_arche.gat,39,135,4	duplicate(Teleportador)	Teleportador#25-1	806
+moc_ruins.gat,64,166,4	duplicate(Teleportador)	Teleportador#26-1	806
+moc_fild19.gat,106,97,4	duplicate(Teleportador)	Teleportador#27-1	806
+alb2trea.gat,73,101,5	duplicate(Teleportador)	Teleportador#28-1	806
+tur_dun01.gat,148,239,5	duplicate(Teleportador)	Teleportador#29-1	806
+yuno_fild07,217,179,5	duplicate(Teleportador)	Teleportador#40-1	806
+prt_sewb1,126,252,4	duplicate(Teleportador)	Teleportador#41-1	806
+moc_fild20,150,145,5	duplicate(Teleportador)	Teleportador#43-1	806
+prt_fild01,140,364,4	duplicate(Teleportador)	Teleportador#44-1	806
+ayo_fild02,278,154,4	duplicate(Teleportador)	Teleportador#45-1	806
+ama_dun01,233,11,4	duplicate(Teleportador)	Teleportador#46-1	806
+hu_fild05,188,210,4	duplicate(Teleportador)	Teleportador#47-1	806
+gonryun,156,200,5	duplicate(Teleportador)	Teleportador#90-1	806 // CALABOUÇO DE KUNLUN
+einbech,133,251,4	duplicate(Teleportador)	Teleportador#39-1	806 // MINA

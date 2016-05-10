@@ -1,0 +1,33 @@
+prontera,153,193,5	script	Curandeira#p	91,{
+percentheal 100,100;
+emotion 51; 
+specialeffect2 12; 
+end;
+}
+alberta,27,240,4	duplicate(Curandeira#p)	Curandeira#alb	91
+aldebaran,137,122,5	duplicate(Curandeira#p)	Curandeira#ald	91
+amatsu,202,83,4	duplicate(Curandeira#p)	Curandeira#ama	91
+ayothaya,152,122,4	duplicate(Curandeira#p)	Curandeira#ayo	91
+brasilis,198,218,4	duplicate(Curandeira#p)	Curandeira#bra	91
+comodo,186,162,5	duplicate(Curandeira#p)	Curandeira#com	91
+einbech,194,105,5	duplicate(Curandeira#p)	Curandeira#einbech	91
+einbroch,59,203,5	duplicate(Curandeira#p)	Curandeira#einbroch	91
+geffen,117,62,5	duplicate(Curandeira#p)	Curandeira#gef	91
+gonryun,161,126,4	duplicate(Curandeira#p)	Curandeira#gon	91
+hugel,96,151,5	duplicate(Curandeira#p)	Curandeira#hug	91
+izlude,126,116,5	duplicate(Curandeira#p)	Curandeira#iz	91
+jawaii,246,131,5	duplicate(Curandeira#p)	Curandeira#jaw	91
+yuno,155,170,5	duplicate(Curandeira#p)	Curandeira#yun	91
+lighthalzen,161,101,4	duplicate(Curandeira#p)	Curandeira#lig	91
+louyang,216,121,5	duplicate(Curandeira#p)	Curandeira#lou	91
+xmas,145,136,5	duplicate(Curandeira#p)	Curandeira#xmas	91
+morocc,155,142,5	duplicate(Curandeira#p)	Curandeira#moc	91
+moscovia,227,198,4	duplicate(Curandeira#p)	Curandeira#mos	91
+niflheim,19,158,5	duplicate(Curandeira#p)	Curandeira#nif	91
+payon,153,233,5	duplicate(Curandeira#p)	Curandeira#pay	91
+rachel,126,115,5	duplicate(Curandeira#p)	Curandeira#rac	91
+umbala,95,164,5	duplicate(Curandeira#p)	Curandeira#umb	91
+veins,214,127,5	duplicate(Curandeira#p)	Curandeira#vei	91
+
+
+

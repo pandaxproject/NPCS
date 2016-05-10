@@ -1,0 +1,24 @@
+prontera,182,214,4	script	Resetadora	403,{
+	set .n$,"^0000FF[ Resetadora ]^000000";
+	mes .n$;
+	mes "Olá ^0000FF"+strcharinfo(0)+"^000000, eu sou a resetadora do servidor, o que você deseja?";
+	mes "Resetar atributos: ^0000FF"+.preco[1]+"z^000000.";
+	mes "Resetar habilidades: ^0000FF"+.preco[2]+"z^000000.";
+	mes "Resetar ambos: ^0000FF"+.preco[3]+"z^000000.";
+	next;
+	if(select("^FF3355- Resetar Atributos.:- Resetar habilidades.:- Resetar ambos.^000000:- Sair") == 4) close;
+	mes .n$;
+	if(Zeny < .preco[@menu]){
+		mes "Desculpe-me, mas você não possui zenys suficientes";
+		close;
+	}
+	mes "Prontinho";
+	set Zeny,Zeny - .preco[@menu];
+	if(@menu != 2) resetstatus;
+	if(@menu != 1) resetskill;
+	close;
+
+OnInit:
+	setarray .preco[1],500000,500000,900000; // Preço para resetar: [1] os atributos, [2] as habilidades e [3] ambos.
+	end;
+}

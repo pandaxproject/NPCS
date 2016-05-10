@@ -1,0 +1,61 @@
+prontera,151,182,5	script	Senhor das Quests#p	51,{
+	set .n$,"^0000FF[ Senhor das Quests ]^000000";
+
+	mes .n$;
+	mes "Olá! Eu sou o responsavel pelas quests de itens do servidor.";
+	mes "Selecione abaixo a quest que você deseja fazer: ";
+	next;
+	menu "^FF0000- Antique pipe^000000",ANTIQUE,
+		 "^FF0000- Rubor de Batalha^000000",RUBOR,
+		 "- Nada, Obrigado",NADA;
+
+
+		// ITENS -----
+		ANTIQUE:
+
+			mes .n$;
+			mes "Tem certeza que deseja fazer ^0000FF\"Antique Pipe\"?";
+			next;
+			switch(select("^FF0000- Produzir Antique Pipe^000000","^FF0000- Itens Necessários^000000","^FF0000- Não, obrigado!^000000")){
+				case 1:
+					if (countitem(2268) >= 10 && countitem(1019) >= 200 && countitem(7098) >= 100 && zeny >= 20000000) {
+					delitem 2268,10; //CACHIMBO
+					delitem 1019,200; //TRONCO
+					delitem 7098,100; //LENHA EM BRASA
+					set Zeny,Zeny-20000000;
+					getitem 5377,1; //ANTIQUE PIPE
+					announce "[Senhor das Quests] : O jogador "+strcharinfo(0)+" finalizou a quest \"Antique Pipe\".",16;
+					close;
+				} else {
+					mes .n$;
+					mes "Você não possui todos os itens, verifique o seu inventário por favor.";
+					close;
+				}
+				
+				case 2:
+					next;
+					mes .n$;
+					mes "Você vai precisar dos seguintes itens: ";
+					mes "10x Cachimbo ^009999(ID: 2268)^000000";
+					mes "200x Tronco ^009999(ID: 1019)^000000";
+					mes "100x Lenha em Brasa ^009999(ID: 7098)^000000";
+					next;
+					goto ANTIQUE;
+
+				case 3:
+					mes .n$;
+					mes "Volte quando quiser produzir um ^0000FF\"Antique Pipe\".";	
+					
+			} // CHAVE QUE FECHA O SIM E NÃO DO ANTIQUE PIPE
+			
+			
+			
+			
+			
+			
+		RUBOR:
+			close;
+
+		NADA:
+			close;
+}

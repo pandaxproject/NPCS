@@ -1,0 +1,555 @@
+prontera,151,190,5	script	Serviço de Teleporte#p	834,{
+
+set .n$,"^0000FF[ Serviço de Teleporte ]^000000";
+
+mes .n$;
+mes "Olá ^0000FF"+strcharinfo(0)+",^000000 eu sou o responsável pelo serviço de teleporte do servidor.";
+mes "Você deseja ir à alguma ^FF0000cidade^000000 ou à um ^FF0000calabouço^000000?";
+	next;
+switch(select("^FF0000- Cidades^000000","^FF0000- Calabouços^000000","- Nada, obrigado!")){
+	
+case 1:	
+mes .n$;
+mes "Selecione abaixo a cidade que deseja ir. ";
+	next;
+	switch(select("^FF0000- Prontera^000000","^FF0000- Morroc^000000","^FF0000- Geffen^000000","^FF0000- Payon^000000","^FF0000- Alberta^000000","^FF0000- Izlude^000000","^FF0000- Aldebaran^000000","^FF0000- Lutie^000000","^FF0000- Comodo^000000","^FF0000- Yuno^000000","^FF0000- Amatsu^000000","^FF0000- Gonryun^000000","^FF0000- Umbala^000000","^FF0000- Niflheim^000000","^FF0000- Louyang^000000","^FF0000- Jawaii^000000","^FF0000- Ayothaya^000000","^FF0000- Einbroch^000000","^FF0000- Lighthalzen^000000","^FF0000- Einbech^000000","^FF0000- Hugel^000000","^FF0000- Rachel^000000","^FF0000- Veins^000000","^FF0000- Moscovia^000000","^FF0000- Brasilis^000000","- Nada, obrigado!")){
+
+		case 1: // PRONTERA
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando para ^0000FFProntera^000000.";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;
+			warp "prontera",156,191;
+			end;
+ 
+ 		case 2: // MOROCC
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando para ^0000FFMorroc^000000.";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;
+			warp "morocc",156,93;
+			end;
+ 
+		case 3: // GEFFEN
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando para ^0000FFGeffen^000000.";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;
+			warp "geffen",119,59;
+			end;
+
+		case 4: // PAYON
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando para ^0000FFPayon^000000.";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;
+			warp "payon",185,100;
+			end;			
+		
+		case 5: // ALBERTA
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando para ^0000FFAlberta^000000.";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;
+			warp "alberta",192,158;
+			end;
+
+		case 6: // IZLUDE
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando para ^0000FFIzlude^000000.";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;
+			warp "izlude",128,114;
+			end;			
+			
+		case 7: // ALDEBARAN
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando para ^0000FFAldebaran^000000.";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;
+			warp "aldebaran",140,124;
+			end;
+			
+		case 8: // LUTIE
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando para ^0000FFLutie^000000.";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;
+			warp "xmas",147,116;
+			end;
+
+		case 9: // COMODO
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando para ^0000FFComodo^000000.";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;
+			warp "comodo",209,143;
+			end;			
+			
+		case 10: // YUNO
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando para ^0000FFYuno^000000.";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;
+			warp "yuno",156,50;
+			end;
+
+		case 11: // AMATSU
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando para ^0000FFAmatsu^000000.";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;
+			warp "amatsu",198,84;
+			end;
+			
+		case 12: // GONRYUN
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando para ^0000FFGonryun^000000.";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;
+			warp "gonryun",160,120;
+			end;
+			
+		case 13: // UMBALA
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando para ^0000FFUmbala^000000.";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;
+			warp "umbala",89,157;
+			end;			
+			
+		case 14: // NIFLHEIM
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando para ^0000FFNiflheim^000000.";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;
+			warp "niflheim",21,153;
+			end;
+			
+		case 15: // LOUYANG
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando para ^0000FFLouyang^000000.";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;
+			warp "louyang",217,94;
+			end;			
+			
+		case 16: // JAWAII
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando para ^0000FFJawaii^000000.";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;
+			warp "jawaii",249,127;
+			end;				
+			
+		case 17: // AYOTHAYA
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando para ^0000FFAyothaya^000000.";;
+			close2;
+			specialeffect2 316;
+			sleep2 2000;
+			warp "ayothaya",151,117;
+			end;			
+			
+		case 18: // EINBROCH
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando para ^0000FFEinbroch^000000.";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;
+			warp "einbroch",64,200;
+			end;				
+			
+		case 19: // LIGHTHALZEN
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando para ^0000FFLighthalzen^000000.";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;
+			warp "lighthalzen",158,92;
+			end;				
+			
+		case 20: // EINBECH
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando para ^0000FFEinbech^000000.";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;
+			warp "einbech",70,95;
+			end;		
+			
+		case 21: // HUGEL
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando para ^0000FFHugel^000000.";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;
+			warp "hugel",96,145;
+			end;			
+			
+		case 22: // RACHEL
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando para ^0000FFRachel^000000.";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;
+			warp "rachel",130,110;
+			end;		
+					
+		case 23: // VEINS
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando para ^0000FFVeins^000000.";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;
+			warp "veins",216,123;
+			end;
+			
+		case 24: // MOSCOVIA
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando para ^0000FFMoscovia^000000.";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;
+			warp "moscovia",223,184;
+			end;			
+			
+		case 25: // BRASILIS
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando para ^0000FFBrasilis^000000.";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;
+			warp "brasilis",195,213;
+			end;
+				
+		case 26: // NADA
+			mes .n$;
+			mes "Volte quando precisar de meus serviços!";
+			close;
+}
+
+			
+case 2:
+	mes .n$;
+	mes "Selecione o calabouço que você deseja ir: ";
+	next;
+	switch(select("^FF0000- Santuário de Xi Wang Mu^000000","^FF0000- Esgoto de Prontera^000000","^FF0000- Návio Fantasma^000000","^FF0000- Ilha das Tartarugas^000000","^FF0000- Labirinto dos Tatames^000000","^FF0000- Monastério^000000","^FF0000- Vulcão de Thor^000000","^FF0000- Torre de Thanatos^000000","^FF0000- O Lago do Abismo^000000","^FF0000- Laboratório de Somatologia^000000","^FF0000- Formigueiro Infernal^000000","^FF0000- Labirinto do Santuário Ancestral^000000","^FF0000- Túnel Submarino^000000","^FF0000- Mina Abandonada de Mjolnir^000000","^FF0000- Calabouço da Mina^000000","^FF0000- Glast Heim^000000","^FF0000- Desfiladeiro El Mes^000000","^FF0000- Calabouço de Magma^000000","^FF0000- Templo de Odin^000000","^FF0000- Vila dos Orcs^000000","^FF0000- Caverna de Payon^000000","^FF0000- Pirâmide^000000","^FF0000- Esfinge^000000","^FF0000- Prisão Subterrânea de Glast Heim^000000","^FF0000- Templo de Rachel^000000","- Nada, obrigado!")){
+
+		case 1: // SANTUÀRIO DE XI WANG MU
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando para ^0000FFSantuário de Xi Wang Mu^000000.";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;
+			warp "gonryun",159,198;
+			end;
+			
+		case 2: // ESGOTO DE PRONTERA
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando para ^0000FFEsgoto de Prontera^000000.";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;
+			warp "prt_sew1",132,248;
+			end;
+
+		case 3: // NAVIO FANTASMA (ILHA DE ALBERTA)
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando para ^0000FFNávio Fantasma^000000.";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;
+			warp "alb2trea",85,107;
+			end;	
+
+		case 4: // ILHA DAS TARTARUGAS
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando para ^0000FFIlha das Tartarugas^000000.";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;
+			warp "tur_dun01",164,31;
+			end;	
+	
+		case 5: // LABIRINTO DOS TATAMES
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando para ^0000FFLabirinto dos Tatames^000000.";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;
+			warp "ama_dun01",233,9;
+			end;
+	
+		case 6: // MONASTÉRIO
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando para ^0000FFMonastério^000000.";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;
+			warp "nameless_n",160,184;
+			end;
+			
+		case 7: // VULCÃO DE THOR
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando para ^0000FFVulcão de Thor^000000.";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;
+			warp "ve_fild03",168,235;
+			end;
+			
+		case 8: // TORRE DE THANATOS
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando para ^0000FFTorre de Thanatos^000000.";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;
+			warp "tha_scene01",131,223;
+			end;			
+
+		case 9: // O LAGO DO ABISMO
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando para ^0000FFO Lago do Abismo^000000.";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;
+			warp "hu_fild05",192,207;
+			end;
+			
+		case 10: // LABORATORIO DE SOMATOLOGIA
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando para ^0000FFLaboratório de Samatologia^000000.";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;
+			warp "lhz_dun01",149,288;
+			end;
+
+		case 11: // FORMIGUEIRO INFERNAL
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando para ^0000FFFormigueiro Infernal^000000.";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;
+			warp "moc_fild20",152,142;
+			end;
+		
+		case 12: // LABIRINTO DO SANTUARIO ANCESTRAL
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando para ^0000FFLabirinto do Santuário Ancestral^000000.";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;
+			warp "ayo_fild02",280,149;
+			end;
+					
+		case 13: // TUNEL SUBMARINO
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando para ^0000FFTúnel Submarino^000000.";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;			
+			warp "izlu2dun",108,88;
+			end;
+			
+		case 14: // MINA ABANDONADA DE MJOLNIR
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando para ^0000FFMina Abandonada de Mjolnir^000000.";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;			
+			warp "mjolnir_02",79,360;
+			end;
+			
+		case 15: // CALABOUÇO DA MINA
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando para ^0000FFCalabouço da Mina^000000.";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;			
+			warp "einbech",138,249;
+			end;
+			
+		case 16: // GLAST HEIM
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando para ^0000FFGlast Heim^000000.";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;			
+			warp "glast_01",368,303;
+			end;		
+
+		case 17: // DESFILADEIRO EL MES
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando para ^0000FFDesfiladeiro El Mes (Vale do Abismo)^000000.";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;			
+			warp "yuno_fild07",218,176;
+			end;
+
+		case 18: // CALABOUÇO DE MAGMA
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando para ^0000FFCalabouço de Magma^000000.";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;			
+			warp "yuno_fild03",37,140;
+			end;				
+
+		case 19: // TEMPLO DE ODIN
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando para ^0000FFTemplo de Odin^000000.";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;			
+			warp "hugel",206,109;
+			end;
+
+		case 20: // VILA DOS ORCS
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando para ^0000FFVila dos Orcs^000000.";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;			
+			warp "gef_fild10",70,332;
+			end;
+
+		case 21: // CAVERNA DE PAYON
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando para ^0000FFCaverna de Payon^000000.";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;			
+			warp "pay_arche",43,132;
+			end;
+
+		case 22: // PIRAMIDE
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando para ^0000FFPirâmide^000000.";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;			
+			warp "moc_ruins",62,161;
+			end;
+		
+		case 23: // ESFINGE
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando para ^0000FFEsfinge^000000.";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;			
+			warp "moc_fild19",107,100;
+			end;		
+		
+		case 24: // PRISÃO SUBTERRÂNEA DE GLAST HEIM
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando para ^0000FFPrisão Subterrânea de Glast Heim^000000.";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;			
+			warp "gl_prison",14,70;
+			end;			
+				
+		case 25: // TEMPLO DE RACHEL
+			mes .n$;
+			mes "Vamos lá!";
+			mes "Teleportando para ^0000FFTemplo de Rachel^000000.";
+			close2;
+			specialeffect2 316;
+			sleep2 2000;			
+			warp "ra_san01",139,135;
+			end;	
+		
+		case 26: // NADA
+			mes .n$;
+			mes "Volte quando precisar de meus serviços!";
+			close;	
+			
+}
+	
+case 3:
+			mes .n$;
+			mes "Volte quando precisar de meus serviços!";
+			close;	
+			
+				
+			
+		}
+
+}
+	
+	
+morocc,164,142,4	duplicate(Serviço de Teleporte#p)	Serviço de Teleporte#moc	834
+geffen,122,62,4	duplicate(Serviço de Teleporte#p)	Serviço de Teleporte#gef	834
+payon,187,103,4	duplicate(Serviço de Teleporte#p)	Serviço de Teleporte#pay	834
+alberta,194,162,4	duplicate(Serviço de Teleporte#p)	Serviço de Teleporte#alb	834
+izlude,130,116,4	duplicate(Serviço de Teleporte#p)	Serviço de Teleporte#iz	834
+aldebaran,143,133,4	duplicate(Serviço de Teleporte#p)	Serviço de Teleporte#ald	834
+xmas,150,125,4	duplicate(Serviço de Teleporte#p)	Serviço de Teleporte#xmas	834
